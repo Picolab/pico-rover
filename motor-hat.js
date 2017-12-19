@@ -1,6 +1,6 @@
 
 let spec = {
-	address: 0x60,
+    address: 0x60,
     steppers: [],
     dcs: ['M1','M2','M3','M4'],
     servos: []
