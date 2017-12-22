@@ -1,0 +1,20 @@
+ 
+INTRODUCTION
+The pico engine is an emerging IoT platform which manages picos (Persistent Compute Objects) by evaluating KRL rules againsts events associated with picos.  The Pico engine has the potential to extend KRL with custom JavaScript modules.  This research developed custom JavaScript modules and proposed and tested a single pico to a single resource model. The development of KRL Custom JavaScript modules for this project was driven by implementing a simple pico rover robot. This robot used a pico engine running on a raspberry pi with a adafruit motor hat. The motor-hat npm library was used to extend GPIO pins connected to Mecanum Wheels to KRL as a module.  The single pico to single resource was implemented where each wheel motor connected to the motorHat is accessed by a single pico which controls its direction and speed.
+
+HYPOTHESIS
+There is a way to provide developers the ability to extend KRL to their needs as modules, with a module able to be accessed without issue by a single Pico.
+ 
+IMPLEMENTATION and EVALUATION
+The pico engine was extended to accept an added configuration for custom modules when the pico engine is used as node project dependencies. Before Matthew Wright added this feature, the engine required a hard coded list of modules and paths to be updated with any new modules.  During development of a related project, I added new modules to this hard coded list in the Pico engine, and I made suggestions of how this could be parameterized, making it accessible to every developer. At the start of this project, Matthew had released what he felt to be the first steps. I Have tested this feature and document the use with very few suggestions for change.
+ 
+... copy paste https://picolabs.atlassian.net/wiki/spaces/docs/pages/96370693/JavaScript+Modules DOCUMENTATION ...
+
+%%% Results of what pico engine did %%%
+The pico engine performed well as a robot controller. The pico rover was able to nivigate in all directions as the mecanum wheels allow. There was difficulty in getting the rover to do orbital, circular movements that mecanum wheels are capable of doing. More dynamic control will need to be implemented to achieve this.
+
+RELATED RESEARCH
+Related project with use of KRL and GPIO pins of a Raspberry Pi was simulating an analog jack-in-the-box with the pico engine.  The jack-in-the-box demonstrated that the engine could be extended to directly handle hardware, specifically GPIO pins of a Raspberry Pi and that the pico engine can handle multiple events in a small amount of time. The jack-in-the-box demonstrated need for developers to extend KRL. The Pico Rover Project built on top of that by developing the process to extend KRL by custom JavaScript modules.
+ 
+CONCLUSION
+JavaScript Modules empower developers to extend KRL to perform low level operations natively in KRL. This research demonstrated that KRL can be extended to use GPIO pins to control a simple Pico rover. This was done by wrapping NPM library as actions in KRL, with Pico systems designed to use single Pico to single GPIO pins of a raspberry pi.  This research has extended the abilities of KRL developers to extend KRL as needed. While the Pico rover shows great promise in using the Pico engine in robot control, more research is needed to show validity in robotics. Possible future studies on the Pico rover could be to implement a Proportional–Integral–Derivative (PID) controller loop for more dynamic and accurate control of the wheels. PID controller loop will further stress test this model and expose any issues of using the Pico engine in robotics. 
