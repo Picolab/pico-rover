@@ -1,4 +1,4 @@
-![alt text](https://github.com/Picolab/pico-rover/blob/master/documentation/IMG_2971.JPG?raw=true)
+![alt text](https://github.com/Picolab/pico-rover/blob/master/documentation/PicoRover.JPG?raw=true)
 # pico-rover
 Pico controlled mecanum wheeled rover.
 
