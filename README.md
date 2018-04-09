@@ -1,3 +1,4 @@
+![alt text](https://github.com/Picolab/pico-rover/blob/master/documentation/IMG_2971.JPG?raw=true)
 # pico-rover
 Pico controlled mecanum wheeled rover.
 
@@ -29,3 +30,6 @@ Specifically, my research will include:
 2. Extending KRL to use GPIO pins by creating a KRL module using a NPM package.
 3. Testing limitations (if any) of using GPIO pins with KRL.
 4. Documenting GPIO module functionality with best practices.
+
+# student research conference Abstract
+The Pico engine is an emerging IoT platform that manages Picos (Persistent Compute Objects) by evaluating KRL rules against events associated with Picos.  It was believed the Pico engine had the potential to extend KRL with custom JavaScript modules, but was never developed until now.  This research developed user-defined JavaScript modules for the Pico engine and proposed and tested a single Pico to a single resource model.  The research was driven by implementing a simple Pico rover robot.  This robot used a Pico engine running on a raspberry pi with a adafruit motor hat.  The motor-hat npm library was used to extend GPIO pins connected to Mecanum Wheels to KRL as a module.  The single Pico to single resource model was implemented where each wheel motor connected to the motorHat is accessed by a single Pico which controls its direction and speed.
